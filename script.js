@@ -152,7 +152,6 @@
 
 
   const setEvents = () => {
-    // Kalp/favori ikonları buraya gelecek
 
     const getCurrentTranslateX = () => {
         const style = getComputedStyle(document.querySelector(SLIDER_TRAY_SELECTOR)).transform;
@@ -171,7 +170,7 @@
 
     document.querySelector('.carousel-arrow-left').addEventListener('click', () => {
         const x = getCurrentTranslateX();
-        if (x < 0) {                             // sadece içeri kaydırıyorsak…
+        if (x < 0) {        
         setTranslateX(Math.min(x + SLIDE_WIDTH, 0));
         updateArrowStates();
         }
@@ -180,7 +179,7 @@
     document.querySelector('.carousel-arrow-right').addEventListener('click', () => {
         const x = getCurrentTranslateX();
         const max = getMaxTranslate();
-        if (x > max) {                           // sadece daha kaydırma alanı varsa…
+        if (x > max) {   
         setTranslateX(Math.max(x - SLIDE_WIDTH, max));
         updateArrowStates();
         }
